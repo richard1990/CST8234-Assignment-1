@@ -6,12 +6,14 @@ Making use of rand() (which makes use of a definition in "particle.h" provided b
 I only change the x and y values to make the particles bounce off the walls. The formulas to do this are as follows:
 
 p -> pos.x += (p -> spd.x * p -> dir.x);
+
 p -> pos.y += (p -> spd.y * p -> dir.y);
 
 I check the boundaries with the following code:
 
 if (p -> pos.x > 100 || p -> pos.x < -100)
     p -> dir.x *= -1;
+    
 if (p -> pos.y > 100 || p -> pos.y < -100)
     p -> dir.y *= -1;
 
